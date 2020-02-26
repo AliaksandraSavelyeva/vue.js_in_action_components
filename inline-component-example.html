@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <my-component v-bind:my-info="message" inline-template>
+            <div>
+                <p>
+                    inline-template - {{ myInfo }}
+                </p>
+            </div>
+        </my-component>
+    </div>
+    <script>
+        const myComponent = {
+            props: ['myInfo']
+        };
+
+        new Vue({
+            el: "#app",
+            components: {'my-component': myComponent},
+            data() {
+                return {
+                    message: 'Hello World'
+                }
+            }
+        });
+    </script>
+</body>
+</html>
