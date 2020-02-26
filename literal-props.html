@@ -5,12 +5,12 @@
     </head>
     <body>
         <div id="app">
-            <my-component text="World"></my-component>
+            <my-component message="World"></my-component>
         </div>
         <script>
             const myComponent = {
-                template: '<div>Hello {{ text }}!</div>',
-                props: ['text']
+                template: '<div>Hello {{ message }}!</div>',
+                props: ['message']
             };
             new Vue({
                 el: "#app",
